@@ -1,65 +1,133 @@
-<?php
-/**
- * The Header for our theme
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-?><!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" <?php language_attributes(); ?>>
-<![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
-<html <?php language_attributes(); ?>>
-<!--<![endif]-->
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-	<![endif]-->
-	<?php wp_head(); ?>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="<?php echo get_template_directory_uri(); ?>/winsun.css" rel="stylesheet">
+
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<?php if ( get_header_image() ) : ?>
-	<div id="site-header">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-		</a>
-	</div>
-	<?php endif; ?>
+<body>
+    <!--header start        -->
+    <div class="header">
+        <div class="other">
+            <a href="#" class="logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
+            </a>
+            <a href="#" class="ren">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/people.png">
+            </a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a></h1>
+            <h3>客户专线</h3>
 
-			<div class="search-toggle">
-				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-			</div>
+            <h2>021—33199889</h2>
+            <div class="search" >
+                <?php get_search_form(); ?>
+             </div>
+            <ul class="trap">
+                <li><a href="">Chinese</a>
+                </li>
+                <li><a href="">English</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--header end-->
+    <!--mainnav start-->
+    <div class="mainnav">
+        <ul>
 
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>
-		</div>
+            <li><a href="#">首页</a>
+            </li>
+            <li><a href="#">产品信息</a>
+                <ul class="sub_nav">
+                    <li><a href="#">数据保险箱</a>
+                    </li>
+                    <li><a href="#">NAS</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">下载中心</a>
+                <ul class="sub_nav">
+                    <li><a href="#">数据保险箱</a>
+                    </li>
+                    <li><a href="#">NAS</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">闻上论坛</a>
+                <ul class="sub_nav">
+                    <li><a href="#">数据保险箱</a>
+                    </li>
+                    <li><a href="#">NAS</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">在线体验</a>
+                <ul class="sub_nav">
+                    <li><a href="#">数据保险箱</a>
+                    </li>
+                    <li><a href="#">NAS</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">走进闻上</a>
 
-		<div id="search-container" class="search-box-wrapper hide">
-			<div class="search-box">
-				<?php get_search_form(); ?>
-			</div>
-		</div>
-	</header><!-- #masthead -->
+                <ul class="sub_nav">
+                    <li><a href="#">公司简介</a>
+                    </li>
+                    <li><a href="#">招贤纳士</a>
+                    </li>
+                    <li><a href="#">团队介绍</a>
+                    </li>
+                    <li><a href="#">新闻中心</a>
+                    </li>
+                </ul>
+            </li>
 
-	<div id="main" class="site-main">
+        </ul>
+
+    </div>
+    <!--mainnav end-->
+    <!--banner start-->
+    <div class="banner">
+
+    </div>
+    <!--banner end-->
+    <!--content start-->
+    <div class="content">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--content end        -->
+    <!--footer start        -->
+    <div class="footer">
+        <a href="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo_bottom.png">
+        </a>
+
+        <p>
+            <a href="#">联系我们</a>
+            <a href="#">招贤纳士</a>
+            <a href="#">天猫店铺</a>
+        </p>
+
+        <p>Copyright © 2014 沪ICP备14031892号上海闻上信息科技有限公司 所有权利均予保留</p>
+    </div>
+    <!--footer end        -->
+</body>
